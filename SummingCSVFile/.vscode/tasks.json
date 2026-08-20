@@ -4,7 +4,7 @@
         {
             "label": "Compile and Run COBOL",
             "type": "shell",
-            "command": "cobc -x -o sumcsv.exe sumcsv.cob ; if ($?) { Start-Sleep -Milliseconds 100; .\\sumcsv.exe }",
+            "command": "cd '${fileDirname}'; cobc -x -o .\\${fileBasenameNoExtension}.exe .\\${fileBasename}; if ($?) { Start-Sleep -Milliseconds 100; .\\${fileBasenameNoExtension}.exe }",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -14,7 +14,8 @@
                 "panel": "new",
                 "focus": true,
                 "clear": true
-            }
+            },
+            "problemMatcher": []
         }
     ]
 }
