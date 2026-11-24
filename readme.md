@@ -1,1 +1,1 @@
-# This will be the readme.md file for the project
+This is a list of projects for COBOL.
